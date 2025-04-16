@@ -1,0 +1,68 @@
+Time and Space Complexity Analysis:
+
+initializeCandidates():
+Time Complexity: O(n), where n is number of candidates
+Space Complexity: O(n)
+Creates map and priority queue for candidates
+
+
+castVote():
+Time Complexity: O(log n) where n is the number of candidates
+Space Complexity: O(1)
+Involves removing and re-adding to priority queue
+
+
+castRandomVote():
+Time Complexity: O(n), where n is number of candidates in the election
+Creating a map and priority queue, iterating through candidate list
+Space Complexity: O(n)
+n = number of candidates
+Storing candidates in map and priority queue
+
+
+
+castVote():
+Time Complexity: O(n), where:
+n = number of candidates in the election
+Removing and re-adding an element requires scanning through all candidates
+Space Complexity: O(1)
+Constant extra space used, regardless of number of candidates
+
+
+
+castRandomVote():
+Time Complexity: O(n), where:
+n = number of candidates in the election
+Selecting a random candidate and casting vote is similar to castVote()
+Space Complexity: O(1)
+Constant extra space used for random selection
+
+
+
+rigElection():
+Time Complexity: O(p * n), where:
+p = number of votes to rig
+n = number of candidates in the election
+Each vote requires scanning through candidates
+Space Complexity: O(1)
+Constant extra space used for rigging votes
+
+
+
+getTopKCandidates():
+Time Complexity: O(n + k log n), where:
+n = number of candidates in the election
+k = number of top candidates requested
+Creating temporary heap is O(n)
+Extracting top k candidates is O(k log n)
+Space Complexity: O(k)
+k = number of top candidates stored
+
+
+
+auditElection():
+Time Complexity: O(n log n), where:
+n = number of candidates in the election
+Creating temporary heap and extracting all candidates
+Space Complexity: O(n)
+n = number of candidates stored in temporary heap
